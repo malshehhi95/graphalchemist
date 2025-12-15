@@ -4,4 +4,4 @@ Turn chart images into structured data and generate intelligent alternative visu
 
 
 🚀 **Live Demo**  
-👉 [https://your-app-name.onrender.com/upload](https://graphalchemist.onrender.com)
+👉 https://graphalchemist.onrender.com
