@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Confirm Extracted Data</title>
+</head>
+<body>
+  <h2>Needs confirmation ❗</h2>
+  <p><b>Notes from vision model:</b> {{ notes }}</p>
+
+  <p>Edit the JSON if needed (categories/values/labels/title), then confirm:</p>
+
+  <form method="post" action="/confirm/{{ job_id }}">
+    <input type="hidden" name="k" value="{{ k }}">
+    <textarea name="json_text" rows="22" cols="90">{{ json_text }}</textarea>
+    <br><br>
+    <button type="submit">Confirm & Generate</button>
+  </form>
+</body>
+</html>

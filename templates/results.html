@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Results</title>
+</head>
+<body>
+  <h2>Results ✅</h2>
+
+  <h3>Extracted data</h3>
+  <pre>{{ data | tojson(indent=2) }}</pre>
+
+  <h3>Selected styles</h3>
+  <pre>{{ styles }}</pre>
+
+  <hr>
+
+  {% for r in results %}
+    <h3>{{ loop.index }}. {{ r.style_id }}</h3>
+    <p><b>Scenario:</b> {{ r.scenario }}</p>
+    <p><b>Why:</b> {{ r.why }}</p>
+    {% if r.notes %}
+      <p><b>Notes:</b> {{ r.notes }}</p>
+    {% endif %}
+    <img src="{{ r.img_url }}" style="max-width: 900px; border: 1px solid #ddd; padding: 6px;">
+  <details style="margin-top:10px;">
+  <summary style="cursor:pointer;"><b>Reveal code</b></summary>
+  <pre style="white-space:pre-wrap; background:#f6f6f6; padding:10px; border:1px solid #ddd;">
+<code>{{ r.code | e }}</code>
+  </pre>
+</details>
+
+    <hr>
+  {% endfor %}
+
+  <p><a href="/upload">Generate another</a></p>
+</body>
+</html>

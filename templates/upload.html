@@ -1,1 +1,35 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Graph Alchemist</title>
+</head>
+<body>
+  <h2>Graph Alchemist 🧪📊</h2>
 
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <ul>
+        {% for m in messages %}<li>{{ m }}</li>{% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+
+  <form method="post" action="/upload" enctype="multipart/form-data">
+    <p>
+      <label>Upload chart image:</label>
+      <input type="file" name="image" accept="image/*" required>
+    </p>
+
+    <p>
+      <label>How many alternative graphs?</label>
+      <select name="k">
+        <option value="3" selected>3 (recommended)</option>
+        <option value="4">4</option>
+      </select>
+    </p>
+
+    <button type="submit">Extract → Generate</button>
+  </form>
+</body>
+</html>
