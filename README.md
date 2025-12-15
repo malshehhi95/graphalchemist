@@ -7,6 +7,8 @@ Turn chart images into structured data and generate intelligent alternative visu
 👉 https://graphalchemist.onrender.com
 
 
+![alt text](https://github.com/malshehhi95/graphalchemist/blob/main/poster.png?raw=true)
+
 
 ## How it works (Technical Methodology)
 
