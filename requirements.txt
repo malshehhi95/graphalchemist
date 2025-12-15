@@ -1,0 +1,6 @@
+flask
+openai
+groq
+matplotlib
+numpy
+gunicorn

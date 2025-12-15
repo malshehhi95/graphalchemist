@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+
+# Flask uploads/results (generated)
+uploads/
+static/results/
+
+# IDE
+.idea/
+.vscode/
